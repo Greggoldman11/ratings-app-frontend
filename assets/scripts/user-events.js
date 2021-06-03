@@ -37,10 +37,17 @@ const onCreateRating = function (event) {
     .then(ui.createRatingSuccess)
     .catch(ui.createRatingFailure)
 }
+const onIndexRating = function (event) {
+  event.preventDefault()
+  api.indexRating()
+    .then(ui.indexRatingSuccess)
+    .catch(ui.indexRatingFailure)
+}
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
   onSignOut,
-  onCreateRating
+  onCreateRating,
+  onIndexRating
 }

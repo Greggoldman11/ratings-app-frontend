@@ -46,11 +46,21 @@ const createRating = function (data) {
     data
   })
 }
+const indexRating = function () {
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + '/ratings',
+    headers: {
+      Authorization: `Bearer ${store.token}`,
+    }
+  })
+}
 
 module.exports = {
   signUp,
   signIn,
   changePassword,
   signOut,
-  createRating
+  createRating,
+  indexRating
 }
