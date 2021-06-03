@@ -26,6 +26,9 @@ const signOutSuccess = () => {
 const signOutFailure = () => {
   $('#message').text('Failure')
 }
+const createRatingSuccess = () => {
+  $('#create-rating-section').hide()
+}
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -34,5 +37,6 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure,
   signOutSuccess,
-  signOutFailure
+  signOutFailure,
+  createRatingSuccess
 }

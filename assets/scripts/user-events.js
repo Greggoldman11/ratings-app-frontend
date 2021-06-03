@@ -30,9 +30,17 @@ const onSignOut = function (event) {
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
 }
+const onCreateRating = function (event) {
+  event.preventDefault()
+  const data = getFormfields(event.target)
+  api.createRating(data)
+    .then(ui.createRatingSuccess)
+    .catch(ui.createRatingFailure)
+}
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
-  onSignOut
+  onSignOut,
+  onCreateRating
 }

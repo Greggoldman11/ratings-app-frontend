@@ -35,10 +35,22 @@ const signOut = function (signInData) {
     }
   })
 }
+const createRating = function (data) {
+  console.log(data)
+  return $.ajax({
+    method: 'POST',
+    url: config.apiUrl + '/ratings',
+    headers: {
+      Authorization: `Bearer ${store.token}`
+    },
+    data
+  })
+}
 
 module.exports = {
   signUp,
   signIn,
   changePassword,
-  signOut
+  signOut,
+  createRating
 }
