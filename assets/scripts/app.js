@@ -14,4 +14,5 @@ $(() => {
   $('#createRating').on('submit', authEvents.onCreateRating)
   $('#indexRatings').on('submit', authEvents.onIndexRating)
   $('#updateRating').on('submit', authEvents.onUpdateRating)
+  $('#deleteRating').on('submit', authEvents.onDeleteRating)
 })

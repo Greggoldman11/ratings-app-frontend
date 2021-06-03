@@ -51,6 +51,14 @@ const onUpdateRating = function (event) {
     .then(ui.updateRatingSuccess)
     .catch(ui.updateRatingFailure)
 }
+const onDeleteRating = function (event) {
+  event.preventDefault()
+  const data = getFormfields(event.target)
+  console.log(data.rating.id)
+  api.deleteRating(data)
+    .then(ui.deleteRatingSuccess)
+    .catch(ui.deleteRatingFailure)
+}
 module.exports = {
   onSignUp,
   onSignIn,
@@ -58,5 +66,6 @@ module.exports = {
   onSignOut,
   onCreateRating,
   onIndexRating,
-  onUpdateRating
+  onUpdateRating,
+  onDeleteRating
 }

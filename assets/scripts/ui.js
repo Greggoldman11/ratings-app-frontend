@@ -29,16 +29,30 @@ const signOutFailure = () => {
 const createRatingSuccess = () => {
   $('#create-rating-section').hide()
 }
+const  createRatingFailure = () => {
+  $('#message').text('Failure')
+}
 const indexRatingSuccess = (res) => {
   const ratingArray = res.ratings
   const ratingString = JSON.stringify(ratingArray)
   $('#message').text(ratingString)
 }
+const indexRatingFailure = () => {
+  $('#message').text('Failure')
+}
 const updateRatingSuccess = (res) => {
-  $('form').trigger('reset')
   const ratingArray = res.ratings
   const ratingString = JSON.stringify(ratingArray)
   $('#message').text(ratingString)
+}
+const updateRatingFailure = () => {
+  $('#message').text('Failure')
+}
+const deleteRatingSuccess = (res) => {
+  console.log(res)
+}
+const deleteRatingFailure = () => {
+  $('#message').text('Failure')
 }
 
 module.exports = {
@@ -52,5 +66,9 @@ module.exports = {
   signOutFailure,
   createRatingSuccess,
   indexRatingSuccess,
-  updateRatingSuccess
+  updateRatingSuccess,
+  deleteRatingSuccess,
+  indexRatingFailure,
+  updateRatingFailure,
+  deleteRatingFailure
 }

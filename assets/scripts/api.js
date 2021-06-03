@@ -64,6 +64,16 @@ const updateRating = function (data) {
     data
   })
 }
+const deleteRating = function (data) {
+  return $.ajax({
+    method: 'DELETE',
+    url: config.apiUrl + '/ratings' + data.rating.id,
+    headers: {
+      Authorization: `Bearer ${store.token}`
+    },
+    data
+  })
+}
 module.exports = {
   signUp,
   signIn,
@@ -71,5 +81,6 @@ module.exports = {
   signOut,
   createRating,
   indexRating,
-  updateRating
+  updateRating,
+  deleteRating
 }
