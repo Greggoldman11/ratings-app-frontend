@@ -4,8 +4,12 @@ const signUpSuccess = () => {
 const signInSuccess = () => {
   $('#sign-in-section').hide()
 }
+const changePasswordSuccess = () => {
+  $('#change-password-section').hide()
+}
 
 module.exports = {
   signUpSuccess,
-  signInSuccess
+  signInSuccess,
+  changePasswordSuccess
 }

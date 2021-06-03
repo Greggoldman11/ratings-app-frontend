@@ -15,8 +15,16 @@ const signIn = function (signInData) {
     data: signInData
   })
 }
+const changePassword = function (changePasswordData) {
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiUrl + '/change-password',
+    data: changePasswordData
+  })
+}
 
 module.exports = {
   signUp,
-  signIn
+  signIn,
+  changePassword
 }
