@@ -12,22 +12,27 @@ const onSignUp = function (event) {
 const onSignIn = function (event) {
   event.preventDefault()
   const signInData = getFormfields(event.target)
-  console.log('in onSignIn: ', signInData)
   api.signIn(signInData)
     .then(ui.signInSuccess)
     .catch(ui.signInFailure)
 }
 const onChangePassword = function (event) {
   event.preventDefault()
-  const changePasswordData = getFormfields(event.target)
-  console.log('in onChangePassword: ', changePasswordData)
-  api.changePassword(changePasswordData)
+  const data = getFormfields(event.target)
+  console.log('in onChangePassword: ', data)
+  api.changePassword(data)
     .then(ui.changePasswordSuccess)
     .catch(ui.changePasswordFailure)
 }
-
+const onSignOut = function (event) {
+  event.preventDefault()
+  api.signOut()
+    .then(ui.signOutSuccess)
+    .catch(ui.signOutFailure)
+}
 module.exports = {
   onSignUp,
   onSignIn,
-  onChangePassword
+  onChangePassword,
+  onSignOut
 }
