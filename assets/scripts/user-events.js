@@ -5,12 +5,20 @@ const ui = require('./ui.js')
 const onSignUp = function (event) {
   event.preventDefault()
   const signUpData = getFormfields(event.target)
-  console.log('in onSignUp: ', signUpData)
   api.signUp(signUpData)
     .then(ui.signUpSuccess)
     .catch(ui.signUpFailure)
 }
+const onSignIn = function (event) {
+  event.preventDefault()
+  const signInData = getFormfields(event.target)
+  console.log('in onSignIn: ', signInData)
+  api.signIn(signInData)
+    .then(ui.signInSuccess)
+    .catch(ui.signInFailure)
+}
 
 module.exports = {
-  onSignUp
+  onSignUp,
+  onSignIn
 }
