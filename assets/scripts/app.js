@@ -13,4 +13,5 @@ $(() => {
   $('#signOutButton').on('click', authEvents.onSignOut)
   $('#createRating').on('submit', authEvents.onCreateRating)
   $('#indexRatings').on('submit', authEvents.onIndexRating)
+  $('#updateRating').on('submit', authEvents.onUpdateRating)
 })

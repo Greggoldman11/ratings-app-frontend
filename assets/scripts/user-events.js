@@ -43,11 +43,20 @@ const onIndexRating = function (event) {
     .then(ui.indexRatingSuccess)
     .catch(ui.indexRatingFailure)
 }
+const onUpdateRating = function (event) {
+  event.preventDefault()
+  const data = getFormfields(event.target)
+  console.log(data.rating.id)
+  api.updateRating(data)
+    .then(ui.updateRatingSuccess)
+    .catch(ui.updateRatingFailure)
+}
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
   onSignOut,
   onCreateRating,
-  onIndexRating
+  onIndexRating,
+  onUpdateRating
 }

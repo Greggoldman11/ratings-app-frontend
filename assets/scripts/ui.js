@@ -34,6 +34,13 @@ const indexRatingSuccess = (res) => {
   const ratingString = JSON.stringify(ratingArray)
   $('#message').text(ratingString)
 }
+const updateRatingSuccess = (res) => {
+  $('form').trigger('reset')
+  const ratingArray = res.ratings
+  const ratingString = JSON.stringify(ratingArray)
+  $('#message').text(ratingString)
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -44,5 +51,6 @@ module.exports = {
   signOutSuccess,
   signOutFailure,
   createRatingSuccess,
-  indexRatingSuccess
+  indexRatingSuccess,
+  updateRatingSuccess
 }

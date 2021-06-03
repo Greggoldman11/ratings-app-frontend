@@ -36,7 +36,6 @@ const signOut = function (signInData) {
   })
 }
 const createRating = function (data) {
-  console.log(data)
   return $.ajax({
     method: 'POST',
     url: config.apiUrl + '/ratings',
@@ -51,16 +50,26 @@ const indexRating = function () {
     method: 'GET',
     url: config.apiUrl + '/ratings',
     headers: {
-      Authorization: `Bearer ${store.token}`,
+      Authorization: `Bearer ${store.token}`
     }
   })
 }
-
+const updateRating = function (data) {
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiUrl + '/ratings' + data.rating.id,
+    headers: {
+      Authorization: `Bearer ${store.token}`
+    },
+    data
+  })
+}
 module.exports = {
   signUp,
   signIn,
   changePassword,
   signOut,
   createRating,
-  indexRating
+  indexRating,
+  updateRating
 }
