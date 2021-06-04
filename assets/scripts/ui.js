@@ -1,37 +1,50 @@
 const store = require('./store.js')
 
 const signUpSuccess = () => {
+  $('form').trigger('reset')
   $('#sign-up-section').hide()
 }
 const signUpFailure = () => {
-  $('#message').text('Failure')
+  $('form').trigger('reset')
+  $('#message').text('You have failed to sign up')
 }
 const signInSuccess = (res) => {
+  $('form').trigger('reset')
   store.token = res.user.token
   $('#sign-in-section').hide()
 }
 const signInFailure = () => {
-  $('#message').text('Failure')
+  $('form').trigger('reset')
+  $('#message').text('You have not signed in successfully')
 }
 const changePasswordSuccess = () => {
-  $('#change-password-section').hide()
+  $('form').trigger('reset')
+  $('#message').text('You have successfully changed passwords')
 }
 const changePasswordFailure = () => {
-  $('#message').text('Failure')
+  $('form').trigger('reset')
+  $('#message').text('You did not successfully change your password')
 }
 const signOutSuccess = () => {
+  $('form').trigger('reset')
   $('#sign-in-section').show()
+  $('#message').text('Signed out successfully')
 }
 const signOutFailure = () => {
-  $('#message').text('Failure')
+  $('form').trigger('reset')
+  $('#message').text('You did not sign out succcessfully')
 }
 const createRatingSuccess = () => {
-  $('#create-rating-section').hide()
+  $('form').trigger('reset')
+  $('#message').text('You created a rating!')
 }
 const createRatingFailure = () => {
-  $('#message').text('Failure')
+  $('form').trigger('reset')
+  $('#message').text('Failed to create a rating')
 }
 const indexRatingSuccess = (res) => {
+  store.rating = res.ratings
+  console.log(store.rating)
   let ratingsHtml = ''
   res.ratings.forEach(function (rating) {
     ratingsHtml += `
@@ -42,24 +55,37 @@ const indexRatingSuccess = (res) => {
       <p>Rating: ${rating.rating}</p>
       `
   })
-
+  $('#message').show()
   $('#message').html(ratingsHtml)
 }
 const indexRatingFailure = () => {
-  $('#message').text('Failure')
+  $('#message').text('Failed to get ratings')
 }
-const updateRatingSuccess = (res) => {
-  const ratingArray = res.ratings
-  const ratingString = JSON.stringify(ratingArray)
-  $('#message').text(ratingString)
+const updateRatingSuccess = () => {
+  $('form').trigger('reset')
+  let ratingsHtml = ''
+  store.rating.forEach(function (rating) {
+    ratingsHtml += `
+      <h2>Name: ${rating.name}</h2>
+      <h6>ID: ${rating._id}</h6>
+      <p>Category: ${rating.category}</p>
+      <p>Notes: ${rating.notes}</p>
+      <p>Rating: ${rating.rating}</p>
+      `
+  })
+  $('#message').html(ratingsHtml)
+  $('#message').hide()
 }
 const updateRatingFailure = () => {
-  $('#message').text('Failure')
+  $('form').trigger('reset')
+  $('#message').text('Failed to update')
 }
 const deleteRatingSuccess = (res) => {
-  console.log(res)
+  $('form').trigger('reset')
+  $('#message').text('successfully deleted')
 }
 const deleteRatingFailure = () => {
+  $('form').trigger('reset')
   $('#message').text('Failure')
 }
 

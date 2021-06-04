@@ -46,7 +46,6 @@ const onIndexRating = function (event) {
 const onUpdateRating = function (event) {
   event.preventDefault()
   const data = getFormfields(event.target)
-  console.log(data.rating.id)
   api.updateRating(data)
     .then(ui.updateRatingSuccess)
     .catch(ui.updateRatingFailure)
