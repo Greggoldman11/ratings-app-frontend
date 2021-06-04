@@ -2,6 +2,8 @@ const store = require('./store.js')
 
 const signUpSuccess = () => {
   $('form').trigger('reset')
+  $('#message').html('You have successfully signed up')
+  $('#sign-in-section').show()
   $('#sign-up-section').hide()
 }
 const signUpFailure = () => {
@@ -10,7 +12,9 @@ const signUpFailure = () => {
 }
 const signInSuccess = (res) => {
   $('form').trigger('reset')
+  store.user = res.user.email
   store.token = res.user.token
+  $('#message').text(`Welcome ${store.user}!`)
   $('#sign-in-section').hide()
 }
 const signInFailure = () => {

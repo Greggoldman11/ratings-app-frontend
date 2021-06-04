@@ -9,6 +9,13 @@ const onSignUp = function (event) {
     .then(ui.signUpSuccess)
     .catch(ui.signUpFailure)
 }
+const onAltSignIn = function () {
+  $('#sign-in-section').show()
+  $('#sign-up-section').hide()
+  $('#altSignIn').hide()
+  $('#message').text('Please sign in')
+  $('form').trigger('reset')
+}
 const onSignIn = function (event) {
   event.preventDefault()
   const signInData = getFormfields(event.target)
@@ -66,5 +73,6 @@ module.exports = {
   onCreateRating,
   onIndexRating,
   onUpdateRating,
-  onDeleteRating
+  onDeleteRating,
+  onAltSignIn
 }
