@@ -8,7 +8,6 @@ const signUpFailure = () => {
 }
 const signInSuccess = (res) => {
   store.token = res.user.token
-  console.log('in signInSucces, ', store.token)
   $('#sign-in-section').hide()
 }
 const signInFailure = () => {
@@ -29,13 +28,22 @@ const signOutFailure = () => {
 const createRatingSuccess = () => {
   $('#create-rating-section').hide()
 }
-const  createRatingFailure = () => {
+const createRatingFailure = () => {
   $('#message').text('Failure')
 }
 const indexRatingSuccess = (res) => {
-  const ratingArray = res.ratings
-  const ratingString = JSON.stringify(ratingArray)
-  $('#message').text(ratingString)
+  let ratingsHtml = ''
+  res.ratings.forEach(function (rating) {
+    ratingsHtml += `
+      <h2>Name: ${rating.name}</h2>
+      <h6>ID: ${rating._id}</h6>
+      <p>Category: ${rating.category}</p>
+      <p>Notes: ${rating.notes}</p>
+      <p>Rating: ${rating.rating}</p>
+      `
+  })
+
+  $('#message').html(ratingsHtml)
 }
 const indexRatingFailure = () => {
   $('#message').text('Failure')
@@ -70,5 +78,6 @@ module.exports = {
   deleteRatingSuccess,
   indexRatingFailure,
   updateRatingFailure,
-  deleteRatingFailure
+  deleteRatingFailure,
+  createRatingFailure
 }
