@@ -57,7 +57,7 @@ const indexRating = function () {
 const updateRating = function (data) {
   return $.ajax({
     method: 'PATCH',
-    url: config.apiUrl + '/ratings' + data.rating.id,
+    url: config.apiUrl + '/ratings/' + data.rating.id,
     headers: {
       Authorization: `Bearer ${store.token}`
     },
@@ -67,7 +67,7 @@ const updateRating = function (data) {
 const deleteRating = function (data) {
   return $.ajax({
     method: 'DELETE',
-    url: config.apiUrl + '/ratings' + data.rating.id,
+    url: config.apiUrl + '/ratings/' + data.rating.id,
     headers: {
       Authorization: `Bearer ${store.token}`
     },

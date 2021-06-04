@@ -73,6 +73,7 @@ const indexRatingFailure = () => {
 }
 const updateRatingSuccess = (res) => {
   store.rating = res.rating
+  JSON.stringify(store.rating)
   const ratingsHtml = `
         <h2>Name: ${store.rating.name}</h2>
         <h6>ID: ${store.rating._id}</h6>
