@@ -72,15 +72,22 @@ const indexRatingFailure = () => {
   $('#message').text('Failed to get ratings')
 }
 const updateRatingSuccess = (res) => {
+  store.rating = res.rating
+  const ratingsHtml = `
+        <h2>Name: ${store.rating.name}</h2>
+        <h6>ID: ${store.rating._id}</h6>
+        <p>Category: ${store.rating.category}</p>
+        <p>Notes: ${store.rating.notes}</p>
+        <p>Rating: ${store.rating.rating}</p>
+        `
+  $('#message').html(ratingsHtml)
   $('form').trigger('reset')
-  console.log(res)
-  $('#message').html('successfully updated')
 }
 const updateRatingFailure = () => {
   $('form').trigger('reset')
   $('#message').text('Failed to update')
 }
-const deleteRatingSuccess = (res) => {
+const deleteRatingSuccess = () => {
   $('form').trigger('reset')
   $('#message').text('successfully deleted')
 }
