@@ -16,6 +16,8 @@ const signInSuccess = (res) => {
   store.token = res.user.token
   $('#message').text(`Welcome ${store.user}!`)
   $('#sign-in-section').hide()
+  $('#signOut').show()
+  $('#ratr').show()
 }
 const signInFailure = () => {
   $('form').trigger('reset')
@@ -32,6 +34,8 @@ const changePasswordFailure = () => {
 const signOutSuccess = () => {
   $('form').trigger('reset')
   $('#sign-in-section').show()
+  $('#signOut').hide()
+  $('#ratr').hide()
   $('#message').text('Signed out successfully')
 }
 const signOutFailure = () => {
