@@ -74,17 +74,6 @@ const indexRatingFailure = () => {
 const updateRatingSuccess = (res) => {
   $('form').trigger('reset')
   console.log(res)
-//   store.rating = res.rating
-//   let ratingsHtml = ''
-//   store.rating.forEach(function (rating) {
-//     ratingsHtml += `
-//       <h2>Name: ${rating.name}</h2>
-//       <h6>ID: ${rating._id}</h6>
-//       <p>Category: ${rating.category}</p>
-//       <p>Notes: ${rating.notes}</p>
-//       <p>Rating: ${rating.rating}</p>
-//       `
-//   })
   $('#message').html('successfully updated')
 }
 const updateRatingFailure = () => {
