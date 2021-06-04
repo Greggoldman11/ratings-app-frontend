@@ -12,8 +12,17 @@ const onSignUp = function (event) {
 const onAltSignIn = function () {
   $('#sign-in-section').show()
   $('#sign-up-section').hide()
+  $('#createNewAccount').show()
   $('#altSignIn').hide()
   $('#message').text('Please sign in')
+  $('form').trigger('reset')
+}
+const onCreateNewAccount = function () {
+  $('#sign-up-section').show()
+  $('#sign-in-section').hide()
+  $('#createNewAccount').hide()
+  $('#altSignIn').show()
+  $('#message').text('Please sign up')
   $('form').trigger('reset')
 }
 const onSignIn = function (event) {
@@ -26,7 +35,6 @@ const onSignIn = function (event) {
 const onChangePassword = function (event) {
   event.preventDefault()
   const data = getFormfields(event.target)
-  console.log('in onChangePassword: ', data)
   api.changePassword(data)
     .then(ui.changePasswordSuccess)
     .catch(ui.changePasswordFailure)
@@ -74,5 +82,6 @@ module.exports = {
   onIndexRating,
   onUpdateRating,
   onDeleteRating,
-  onAltSignIn
+  onAltSignIn,
+  onCreateNewAccount
 }

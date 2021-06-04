@@ -16,6 +16,7 @@ $(() => {
   $('#updateRating').on('submit', authEvents.onUpdateRating)
   $('#deleteRating').on('submit', authEvents.onDeleteRating)
   $('#altSignIn').on('click', authEvents.onAltSignIn)
+  $('#createNewAccount').on('click', authEvents.onCreateNewAccount)
   $('#sign-in-section').hide()
   $('#signOut').hide()
   $('#change-password-section').hide()
