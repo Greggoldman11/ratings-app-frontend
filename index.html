@@ -12,21 +12,29 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <!-- <div class="d-flex justify-content-center">I'm a flexbox container!</div> -->
       <ul class="nav">
         <li class="nav-item">
-          <button class="nav-link cpw">Change Password</button>
+          <button class="nav-link cpw" type="submit">Change Password</button>
         </li>
         <li class="nav-item">
-          <button class="nav-link" id="signOutButton">Sign Out</button>
+          <button class="nav-link" id="signOutButton" type="submit">Sign Out</button>
         </li>
-        <li class="nav-item" id="index-rating-section">
-          <form id="indexRatings">
-              <button type="submit" id="index-button">View Ratings</button>
-          </form>
+        <li class="nav-item">
+          <button class="nav-link create" type="submit">Create</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link update" type="submit">Update</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link delete" type="submit">Delete</button>
         </li>
       </ul>
       <h1 id="main-heading" class="d-flex justify-content-center">The best way to keep track of what you like!</h1>
+      <section id="index-rating-section">
+        <form id="indexRatings">
+            <button type="submit" id="index-button">View Ratings</button>
+        </form>
+      </section>
       <section id="sign-up-section">
         <h2>Sign Up</h2>
         <form id="signUp">
@@ -61,9 +69,10 @@
             <input name="rating[name]" type="text" placeholder="Name of item">
             <input name="rating[category]" type="text" placeholder="Category">
             <input name="rating[notes]" type="text" placeholder="Notes">
-            <input name="rating[rating]" type="number" max=5 min=0 placeholder="Rating">
+            <input name="rating[rating]" type="number" max=5 min=0 size="50" placeholder="Rating">
             <button type="submit" id="post-button">Post Rating</button>
           </form>
+          <button class="nav-item main-page">Back to main</button>
         </section>
         <section id="update-rating-section">
           <form id="updateRating">
@@ -74,6 +83,7 @@
             <input name="rating[rating]" type="number" max=5 min=0 placeholder="Rating">
             <button type="submit" id="update-button">Update Rating</button>
           </form>
+          <button class="nav-item main-page">Back to main</button>
         </section>
       </div>
       <section id="delete-rating-section">
@@ -81,6 +91,7 @@
             <input name="rating[id]" type="text" placeholder="ID">
             <button type="submit" id="delete-button">Delete Rating</button>
         </form>
+        <button class="nav-item main-page">Back to main</button>
       </section>
       <p id='message'></p>
     </body>

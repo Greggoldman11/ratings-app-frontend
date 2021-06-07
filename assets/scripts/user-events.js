@@ -79,11 +79,34 @@ const onCpwClick = () => {
   $('#main-heading').text('Change Password')
   $('#delete-rating-section').hide()
   $('#message').text('')
+  $('#index-rating-section').hide()
 }
 const onMainpageClick = () => {
   $('#ratr').show()
   $('#main-heading').text('The best way to keep track of what you like!')
   $('#change-password-section').hide()
+  $('#index-rating-section').show()
+  $('#update-rating-section').hide()
+  $('#delete-rating-section').hide()
+  $('#create-rating-section').hide()
+}
+const makeUpdate = () => {
+  $('#update-rating-section').show()
+  $('#delete-rating-section').hide()
+  $('#create-rating-section').hide()
+  $('#main-heading').text('Update ratings that you posted')
+}
+const makeDelete = () => {
+  $('#delete-rating-section').show()
+  $('#update-rating-section').hide()
+  $('#create-rating-section').hide()
+  $('#main-heading').text('Delete ratings that you posted')
+}
+const makeCreate = () => {
+  $('#create-rating-section').show()
+  $('#update-rating-section').hide()
+  $('#delete-rating-section').hide()
+  $('#main-heading').text('Rate something!')
 }
 module.exports = {
   onSignUp,
@@ -97,5 +120,8 @@ module.exports = {
   onAltSignIn,
   onCreateNewAccount,
   onCpwClick,
-  onMainpageClick
+  onMainpageClick,
+  makeUpdate,
+  makeDelete,
+  makeCreate
 }

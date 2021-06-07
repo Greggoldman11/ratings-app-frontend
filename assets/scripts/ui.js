@@ -19,6 +19,7 @@ const signInSuccess = (res) => {
   $('#signOut').show()
   $('#ratr').show()
   $('#update-rating-section').hide()
+  $('#index-rating-section').show()
   $('.nav').show()
 }
 const signInFailure = () => {
@@ -45,7 +46,8 @@ const signOutSuccess = () => {
   $('#change-password-section').hide()
   $('#message').text('Signed out successfully')
   $('#delete-rating-section').hide()
-
+  $('#index-rating-section').hide()
+  $('#main-heading').text('The best way to keep track of what you like!')
 }
 const signOutFailure = () => {
   $('form').trigger('reset')
@@ -72,9 +74,8 @@ const indexRatingSuccess = (res) => {
       `
   })
   $('#message').show()
+  $('#message').css('font-size', '25')
   $('#message').html(`The ratings are: ${ratingsHtml}`)
-  $('#update-rating-section').show()
-  $('#delete-rating-section').show()
 }
 const indexRatingFailure = () => {
   $('#message').text('Failed to get ratings')
@@ -104,7 +105,6 @@ const deleteRatingFailure = () => {
   $('form').trigger('reset')
   $('#message').text('Failure')
 }
-
 
 module.exports = {
   signUpSuccess,

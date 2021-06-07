@@ -1,1 +1,25 @@
 @import '~bootstrap/scss/bootstrap';
+$alt-color: #BDB9B9;
+body {
+  text-align: center;
+  background: #146615;
+}
+#ratr, #delete-rating-section, #ratingsHtml {
+  text-align: left;
+}
+
+.nav {
+display: flex;
+justify-content: flex-end;
+
+}
+#main-heading {
+  margin-top: 10%;
+}
+
+#message {
+  color: $alt-color;
+}
+h1, h2 {
+  color: $alt-color;
+}
