@@ -78,6 +78,11 @@ const onCpwClick = () => {
   $('#ratr').hide()
   $('#main-heading').text('Change Password')
 }
+const onMainpageClick = () => {
+  $('#ratr').show()
+  $('#main-heading').text('The best way to keep track of what you like!')
+  $('#change-password-section').hide()
+}
 module.exports = {
   onSignUp,
   onSignIn,
@@ -89,5 +94,6 @@ module.exports = {
   onDeleteRating,
   onAltSignIn,
   onCreateNewAccount,
-  onCpwClick
+  onCpwClick,
+  onMainpageClick
 }
