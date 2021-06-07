@@ -19,6 +19,7 @@ const signInSuccess = (res) => {
   $('#signOut').show()
   $('#ratr').show()
   $('#update-rating-section').hide()
+  $('#change-password-section').show()
 }
 const signInFailure = () => {
   $('form').trigger('reset')
@@ -37,6 +38,7 @@ const signOutSuccess = () => {
   $('#sign-in-section').show()
   $('#signOut').hide()
   $('#ratr').hide()
+  $('#change-password-section').hide()
   $('#message').text('Signed out successfully')
 }
 const signOutFailure = () => {
