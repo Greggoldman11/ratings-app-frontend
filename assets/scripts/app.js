@@ -21,4 +21,6 @@ $(() => {
   $('#signOut').hide()
   $('#change-password-section').hide()
   $('#ratr').hide()
+  $('.nav').hide()
+  $('.cpw').on('click', authEvents.onCpwClick)
 })

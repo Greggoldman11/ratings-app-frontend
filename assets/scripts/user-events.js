@@ -73,6 +73,11 @@ const onDeleteRating = function (event) {
     .then(ui.deleteRatingSuccess)
     .catch(ui.deleteRatingFailure)
 }
+const onCpwClick = () => {
+  $('#change-password-section').show()
+  $('#ratr').hide()
+  $('#main-heading').text('Change Password')
+}
 module.exports = {
   onSignUp,
   onSignIn,
@@ -83,5 +88,6 @@ module.exports = {
   onUpdateRating,
   onDeleteRating,
   onAltSignIn,
-  onCreateNewAccount
+  onCreateNewAccount,
+  onCpwClick
 }

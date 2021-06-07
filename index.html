@@ -12,7 +12,15 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>The best way to keep track of what you like!</h1>
+      <ul class="nav">
+        <li class="nav-item">
+          <button class="nav-link cpw">Change Password</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" id="signOutButton">Sign Out</button>
+        </li>
+      </ul>
+      <h1 id="main-heading">The best way to keep track of what you like!</h1>
       <section id="sign-up-section">
         <h2>Sign Up</h2>
         <form id="signUp">
@@ -39,10 +47,6 @@
           <input name="passwords[new]" type="password" placeholder="New pw">
           <button type="submit" id="changePasswordButton">Change Password</button>
         </form>
-      </section>
-      <section id="signOut">
-        <h2>Sign Out</h2>
-        <button type="submit" id="signOutButton">Sign Out</button>
       </section>
       <div id="ratr">
         <section id="create-rating-section">
