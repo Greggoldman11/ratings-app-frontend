@@ -95,18 +95,21 @@ const makeUpdate = () => {
   $('#delete-rating-section').hide()
   $('#create-rating-section').hide()
   $('#main-heading').text('Update ratings that you posted')
+  $('#update-rating-section').css('padding', '5%')
 }
 const makeDelete = () => {
   $('#delete-rating-section').show()
   $('#update-rating-section').hide()
   $('#create-rating-section').hide()
   $('#main-heading').text('Delete ratings that you posted')
+  $('#delete-rating-section').css('padding', '5%')
 }
 const makeCreate = () => {
   $('#create-rating-section').show()
   $('#update-rating-section').hide()
   $('#delete-rating-section').hide()
   $('#main-heading').text('Rate something!')
+  $('#create-rating-section').css('padding', '5%')
 }
 module.exports = {
   onSignUp,
