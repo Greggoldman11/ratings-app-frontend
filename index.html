@@ -16,9 +16,9 @@
       <section id="sign-up-section">
         <h2>Sign Up</h2>
         <form id="signUp">
-          <input name="credentials[email]" type="text" placeholder="Email">
+          <input name="credentials[email]" type="text" placeholder="Username">
           <input name="credentials[password]" type="password" placeholder="password">
-          <input name="credentials[password_confirmation]" type="password" placeholder="password">
+          <input name="credentials[password_confirmation]" type="password" placeholder="password confirmation">
           <button type="submit" id="signUpButton">Sign Up</button>
         </form>
       </section>
@@ -26,7 +26,7 @@
       <section id="sign-in-section">
         <h2>Sign in</h2>
         <form id="signIn">
-          <input name="credentials[email]" type="text" placeholder="Email">
+          <input name="credentials[email]" type="text" placeholder="Username">
           <input name="credentials[password]" type="password" placeholder="password">
           <button type="submit" id="signInButton">Sign In</button>
         </form>
@@ -60,7 +60,7 @@
             <input name="rating[name]" type="text" placeholder="Name of item">
             <input name="rating[category]" type="text" placeholder="Category">
             <input name="rating[notes]" type="text" placeholder="Notes">
-            <input name="rating[rating]" type="number" placeholder="Rating">
+            <input name="rating[rating]" type="number" max=5 min=0 placeholder="Rating">
             <button type="submit" id="update-button">Update Rating</button>
           </form>
         </section>

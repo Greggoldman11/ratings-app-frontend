@@ -67,7 +67,7 @@ const indexRatingSuccess = (res) => {
       `
   })
   $('#message').show()
-  $('#message').html(ratingsHtml)
+  $('#message').html(`The ratings are: ${ratingsHtml}`)
   $('#update-rating-section').show()
 }
 const indexRatingFailure = () => {
@@ -83,7 +83,7 @@ const updateRatingSuccess = (res) => {
         <p>Notes: ${store.rating.notes}</p>
         <p>Rating: ${store.rating.rating}</p>
         `
-  $('#message').html(ratingsHtml)
+  $('#message').html(`You have successfully updated: ${ratingsHtml}`)
   $('form').trigger('reset')
 }
 const updateRatingFailure = () => {
