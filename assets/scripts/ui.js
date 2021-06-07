@@ -44,6 +44,8 @@ const signOutSuccess = () => {
   $('.nav').hide()
   $('#change-password-section').hide()
   $('#message').text('Signed out successfully')
+  $('#delete-rating-section').hide()
+
 }
 const signOutFailure = () => {
   $('form').trigger('reset')

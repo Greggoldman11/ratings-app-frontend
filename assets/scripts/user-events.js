@@ -77,6 +77,8 @@ const onCpwClick = () => {
   $('#change-password-section').show()
   $('#ratr').hide()
   $('#main-heading').text('Change Password')
+  $('#delete-rating-section').hide()
+  $('#message').text('')
 }
 const onMainpageClick = () => {
   $('#ratr').show()
