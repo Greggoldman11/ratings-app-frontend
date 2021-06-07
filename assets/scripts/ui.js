@@ -55,7 +55,6 @@ const createRatingFailure = () => {
 }
 const indexRatingSuccess = (res) => {
   store.rating = res.ratings
-  console.log(store.rating)
   let ratingsHtml = ''
   res.ratings.forEach(function (rating) {
     ratingsHtml += `
