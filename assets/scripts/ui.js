@@ -72,6 +72,7 @@ const indexRatingSuccess = (res) => {
   $('#message').show()
   $('#message').html(`The ratings are: ${ratingsHtml}`)
   $('#update-rating-section').show()
+  $('#delete-rating-section').show()
 }
 const indexRatingFailure = () => {
   $('#message').text('Failed to get ratings')

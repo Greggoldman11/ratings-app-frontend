@@ -24,4 +24,5 @@ $(() => {
   $('.nav').hide()
   $('.cpw').on('click', authEvents.onCpwClick)
   $('.main-page').on('click', authEvents.onMainpageClick)
+  $('#delete-rating-section').hide()
 })
