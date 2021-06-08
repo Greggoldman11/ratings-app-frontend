@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Ratr</title>
+      <title>Trackr</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -10,6 +10,8 @@
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
       <ul class="nav justify-content-center">
@@ -30,15 +32,17 @@
         </li>
       </ul>
       <div id="main-heading-div">
-        <h1 id="main-heading" class="d-flex justify-content-center">The best way to keep track of what you like!</h1>
+        <h1 id="main-heading" class="d-flex justify-content-center">The best way to keep track of what you like&nbsp;
+            <i class="fa fa-train"></i>
+        </h1>
       </div>
       <section id="index-rating-section">
         <form id="indexRatings">
-            <button type="submit" id="index-button">View Ratings</button>
+            <button type="submit" id="index-button">View My Tracks</button>
         </form>
       </section>
       <section id="sign-up-section">
-        <h2>Sign Up</h2>
+        <h1>Start Tracking Today</h1>
         <form id="signUp">
           <input name="credentials[email]" type="text" placeholder="Username">
           <input name="credentials[password]" type="password" placeholder="password">
@@ -46,9 +50,9 @@
           <button type="submit" id="signUpButton">Sign Up</button>
         </form>
       </section>
-      <button type="submit" id="altSignIn">already have an account?</button>
+      <button type="submit" id="altSignIn">Already have an account?</button>
       <section id="sign-in-section">
-        <h2>Sign in</h2>
+        <h1>Sign in</h1>
         <form id="signIn">
           <input name="credentials[email]" type="text" placeholder="Username">
           <input name="credentials[password]" type="password" placeholder="password">
@@ -57,7 +61,7 @@
       <button type="submit" id="createNewAccount">Create New Account</button>
       </section>
       <section id="change-password-section">
-        <h2>Change Password</h2>
+        <h1>Change Password</h1>
         <form id="changePassword">
           <input name="passwords[old]" type="password" placeholder="Old pw">
           <input name="passwords[new]" type="password" placeholder="New pw">

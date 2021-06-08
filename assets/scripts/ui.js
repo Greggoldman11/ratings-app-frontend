@@ -55,7 +55,7 @@ const signOutFailure = () => {
 }
 const createRatingSuccess = () => {
   $('form').trigger('reset')
-  $('#message').text('You created a rating!')
+  $('#message').text('You created a track!')
 }
 const createRatingFailure = () => {
   $('form').trigger('reset')
@@ -66,16 +66,20 @@ const indexRatingSuccess = (res) => {
   let ratingsHtml = ''
   res.ratings.forEach(function (rating) {
     ratingsHtml += `
-      <h2>Name: ${rating.name}</h2>
-      <h6>ID: ${rating._id}</h6>
-      <p>Category: ${rating.category}</p>
-      <p>Notes: ${rating.notes}</p>
-      <p>Rating: ${rating.rating}</p>
+      <h2 class='border-top rounded-pill'>Name: ${rating.name}</h2>
+      <h4>ID: ${rating._id}</h4>
+      <h4>Category: ${rating.category}</h4>
+      <h4>Notes: ${rating.notes}</h4>
+      <h4 class='border-bottom rounded-pill'>Rating: ${rating.rating}</h4>
       `
   })
   $('#message').show()
+  $('#create-rating-section').hide()
+  $('#delete-rating-section').hide()
+  $('#update-rating-section').hide()
+  $('#main-heading').text('Good Tracks!')
   $('#message').css('font-size', '25')
-  $('#message').html(`The ratings are: ${ratingsHtml}`)
+  $('#message').html(`Your tracks are: ${ratingsHtml}`)
 }
 const indexRatingFailure = () => {
   $('#message').text('Failed to get ratings')

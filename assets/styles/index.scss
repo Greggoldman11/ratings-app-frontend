@@ -1,8 +1,14 @@
 @import '~bootstrap/scss/bootstrap';
+
 $alt-color: silver;
 body {
   text-align: center;
   background-color: #ccffff;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('../../public/wall-background.jpeg') no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 100vh;
+  font-family: Helvetica black;
 }
 
 .nav {
@@ -11,9 +17,18 @@ justify-content: flex-end;
 background-color: black;
 }
 .nav-link {
-  border-color: yellow;
+  border: solid 2px yellow;
+  padding: 25px;
+  margin: 25px;
 }
-
+#message {
+  background-color: yellow;
+  width: 400px;
+  font-size: 50px;
+  text-align: center;
+  margin: auto;
+  border-radius: 5px;
+}
 button {
   margin: 12px;
   color: white;
@@ -24,21 +39,47 @@ button {
   }
 }
 #main-heading-div {
-  color: $alt-color;
   display: flex;
-  height: 500px;
-  width: 100%;
   margin: auto;
-  margin-top: 2%;
+  margin-top: 5%;
+  margin-bottom: 5%;
   padding-top: 5%;
-  max-height: calc(100vh - 75px);
-  max-width: calc(100vh - 75px);
   justify-content: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../../public/guides-media-critic.png') no-repeat center center;
-  background-size: cover;
-}
+  background-color: $alt-color;
+ }
 #ratr, #delete-rating-section {
   display: flex;
   justify-content: center;
   color: black;
+}
+#sign-in-section #sign-up-section {
+  margin-bottom: 10%;
+}
+
+@keyframes slide {
+    0%  {
+          color: #b6b6b6;
+          left: -400px;
+        }
+    25%  {
+          color: #868686;
+          }
+    50%  {
+          color: #565656;
+          }
+    75%  {
+          color: #272727;
+        }
+    100% {
+          color: #000000;
+          left: 0;
+        }
+}
+#main-heading {
+  margin-bottom: 5%;
+  font-weight: bolder;
+  position: relative;
+  animation-name: slide;
+  animation-duration: 7s;
+  animation-iteration-count: 1;
 }
