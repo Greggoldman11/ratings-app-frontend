@@ -76,7 +76,7 @@ const deleteRating = function (data) {
 const taco = () => {
   return $.ajax({
     method: 'GET',
-    url: 'http://taco-randomizer.herokuapp.com/random/'
+    url: 'https://taco-randomizer.herokuapp.com/random/'
   })
 }
 module.exports = {

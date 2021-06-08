@@ -3,12 +3,12 @@
 $alt-color: silver;
 body {
   text-align: center;
-  background-color: #ccffff;
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('../../public/wall-background.jpeg') no-repeat center center;
   background-size: cover;
   min-height: 100vh;
   min-width: 100vh;
   font-family: Helvetica black;
+  background-color: #ccffff;
 }
 
 .nav {
