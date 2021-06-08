@@ -4,7 +4,7 @@ $alt-color: silver;
 body {
   text-align: center;
   background-color: #ccffff;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../../public/wall-background.jpeg') no-repeat center center;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('../../public/wall-background.jpeg') no-repeat center center;
   background-size: cover;
   min-height: 100vh;
   min-width: 100vh;
@@ -37,13 +37,13 @@ button {
   }
 }
 #main-heading-div {
-  color: $alt-color;
   display: flex;
   margin: auto;
   margin-top: 5%;
   margin-bottom: 5%;
   padding-top: 5%;
   justify-content: center;
+  background-color: $alt-color;
  }
 #ratr, #delete-rating-section {
   display: flex;
@@ -52,4 +52,32 @@ button {
 }
 #sign-in-section #sign-up-section {
   margin-bottom: 10%;
+}
+
+@keyframes slide {
+    0%  {
+          color: #b6b6b6;
+          left: -400px;
+        }
+    25%  {
+          color: #868686;
+          }
+    50%  {
+          color: #565656;
+          }
+    75%  {
+          color: #272727;
+        }
+    100% {
+          color: #000000;
+          left: 0;
+        }
+}
+#main-heading {
+  margin-bottom: 5%;
+  font-weight: bolder;
+  position: relative;
+  animation-name: slide;
+  animation-duration: 7s;
+  animation-iteration-count: 1;
 }

@@ -55,7 +55,7 @@ const signOutFailure = () => {
 }
 const createRatingSuccess = () => {
   $('form').trigger('reset')
-  $('#message').text('You created a rating!')
+  $('#message').text('You created a track!')
 }
 const createRatingFailure = () => {
   $('form').trigger('reset')
@@ -75,7 +75,7 @@ const indexRatingSuccess = (res) => {
   })
   $('#message').show()
   $('#message').css('font-size', '25')
-  $('#message').html(`Your ratings are: ${ratingsHtml}`)
+  $('#message').html(`Your tracks are: ${ratingsHtml}`)
 }
 const indexRatingFailure = () => {
   $('#message').text('Failed to get ratings')

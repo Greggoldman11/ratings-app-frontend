@@ -98,6 +98,7 @@ const makeUpdate = () => {
   $('#main-heading').text('Update ratings that you posted')
   $('#update-rating-section').css('padding', '5%')
   $('#main-heading').text('The best way to update what you like!')
+  $('#message').text('')
 }
 const makeDelete = () => {
   $('#delete-rating-section').show()
@@ -106,6 +107,7 @@ const makeDelete = () => {
   $('#main-heading').text('Delete ratings that you posted')
   $('#delete-rating-section').css('padding', '5%')
   $('#main-heading').text('The best way to delete what you don\'t like!')
+  $('#message').text('')
 }
 const makeCreate = () => {
   $('#create-rating-section').show()
@@ -113,7 +115,8 @@ const makeCreate = () => {
   $('#delete-rating-section').hide()
   $('#main-heading').text('Rate something!')
   $('#create-rating-section').css('padding', '5%')
-  $('#main-heading').text('The best way to create ratings for what you like!')
+  $('#message').text('')
+  $('#main-heading').text('The best way to create tracks for what you like!')
 }
 module.exports = {
   onSignUp,
