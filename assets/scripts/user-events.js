@@ -77,6 +77,43 @@ const onCpwClick = () => {
   $('#change-password-section').show()
   $('#ratr').hide()
   $('#main-heading').text('Change Password')
+  $('#delete-rating-section').hide()
+  $('#message').text('')
+  $('#index-rating-section').hide()
+}
+const onMainpageClick = () => {
+  $('#ratr').show()
+  $('#main-heading').text('The best way to keep track of what you like!')
+  $('#change-password-section').hide()
+  $('#index-rating-section').show()
+  $('#update-rating-section').hide()
+  $('#delete-rating-section').hide()
+  $('#create-rating-section').hide()
+  $('#message').text('')
+}
+const makeUpdate = () => {
+  $('#update-rating-section').show()
+  $('#delete-rating-section').hide()
+  $('#create-rating-section').hide()
+  $('#main-heading').text('Update ratings that you posted')
+  $('#update-rating-section').css('padding', '5%')
+  $('#main-heading').text('The best way to update what you like!')
+}
+const makeDelete = () => {
+  $('#delete-rating-section').show()
+  $('#update-rating-section').hide()
+  $('#create-rating-section').hide()
+  $('#main-heading').text('Delete ratings that you posted')
+  $('#delete-rating-section').css('padding', '5%')
+  $('#main-heading').text('The best way to delete what you don\'t like!')
+}
+const makeCreate = () => {
+  $('#create-rating-section').show()
+  $('#update-rating-section').hide()
+  $('#delete-rating-section').hide()
+  $('#main-heading').text('Rate something!')
+  $('#create-rating-section').css('padding', '5%')
+  $('#main-heading').text('The best way to create ratings for what you like!')
 }
 module.exports = {
   onSignUp,
@@ -89,5 +126,9 @@ module.exports = {
   onDeleteRating,
   onAltSignIn,
   onCreateNewAccount,
-  onCpwClick
+  onCpwClick,
+  onMainpageClick,
+  makeUpdate,
+  makeDelete,
+  makeCreate
 }
