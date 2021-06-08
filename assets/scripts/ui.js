@@ -74,6 +74,10 @@ const indexRatingSuccess = (res) => {
       `
   })
   $('#message').show()
+  $('#create-rating-section').hide()
+  $('#delete-rating-section').hide()
+  $('#update-rating-section').hide()
+  $('#main-heading').text('Good Tracks!')
   $('#message').css('font-size', '25')
   $('#message').html(`Your tracks are: ${ratingsHtml}`)
 }
