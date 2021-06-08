@@ -1,35 +1,44 @@
 @import '~bootstrap/scss/bootstrap';
-$alt-color: #BDB9B9;
+$alt-color: black;
 body {
   text-align: center;
-  background-color: #146615;
+  background-color: #ccffff;
 }
-#ratr, #delete-rating-section, #ratingsHtml {
-  text-align: center;
-}
+
 .nav {
 display: flex;
 justify-content: flex-end;
-background-color: #06FAC6;
+background-color: black;
 }
-#main-heading {
-  margin-top: 10%;
+.nav-link {
+  border-color: yellow;
 }
 
-#message {
-  color: $alt-color;
-}
-h1, h2 {
+#main-heading {
   color: $alt-color;
 }
 button {
   margin: 12px;
+  color: white;
   background-color: $alt-color;
   border-radius: 10px;
+  &:hover {
+    background: grey;
+  }
 }
 #main-heading-div {
   display: flex;
+  height: 250px;
+  width: 100%;
+  margin: auto;
+  max-height: calc(100vh - 50px);
+  max-width: calc(100vh - 75px);
   justify-content: center;
   background: url('../../public/smiley-scale.jpeg') no-repeat center center;
   background-size: contain;
+}
+#ratr, #delete-rating-section, #ratingsHtml {
+  display: flex;
+  justify-content: center;
+  color: black;
 }
