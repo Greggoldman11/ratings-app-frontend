@@ -121,6 +121,9 @@ const tryTacoSuccess = (res) => {
   `
   $('#message').html(taco)
   $('#main-heading').text('Since you clicked on the taco you have to make a taco and then track it in this app!')
+  $('#create-rating-section').hide()
+  $('#update-rating-section').hide()
+  $('#delete-rating-section').hide()
 }
 const tryTacoFailure = () => {
   $('#message').text('no taco for you')
