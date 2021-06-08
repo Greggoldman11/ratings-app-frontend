@@ -115,7 +115,6 @@ const deleteRatingFailure = () => {
 }
 const tryTacoSuccess = (res) => {
   store.taco = res
-  console.log(store.taco)
   const taco = `
   <h1>Name: ${store.taco.base_layer.name}</h1>
   <article style="font-size:20px">Recipe: ${store.taco.base_layer.recipe}</article>

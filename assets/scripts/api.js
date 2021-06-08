@@ -1,6 +1,6 @@
 const config = require('./config.js')
 const store = require('./store.js')
-
+// API calls for all CRUD actions
 const signUp = function (signUpData) {
   return $.ajax({
     method: 'POST',

@@ -1,7 +1,8 @@
 const getFormfields = require('../../lib/get-form-fields.js')
 const api = require('./api.js')
 const ui = require('./ui.js')
-
+// event handlers
+// sign up
 const onSignUp = function (event) {
   event.preventDefault()
   const signUpData = getFormfields(event.target)
@@ -9,6 +10,7 @@ const onSignUp = function (event) {
     .then(ui.signUpSuccess)
     .catch(ui.signUpFailure)
 }
+// show sign in page when the user does not want to create a new account
 const onAltSignIn = function () {
   $('#sign-in-section').show()
   $('#sign-up-section').hide()
@@ -17,6 +19,7 @@ const onAltSignIn = function () {
   $('#message').text('Please sign in')
   $('form').trigger('reset')
 }
+// create a new account
 const onCreateNewAccount = function () {
   $('#sign-up-section').show()
   $('#sign-in-section').hide()
@@ -25,6 +28,7 @@ const onCreateNewAccount = function () {
   $('#message').text('Please sign up')
   $('form').trigger('reset')
 }
+// sign in
 const onSignIn = function (event) {
   event.preventDefault()
   const signInData = getFormfields(event.target)
@@ -32,6 +36,7 @@ const onSignIn = function (event) {
     .then(ui.signInSuccess)
     .catch(ui.signInFailure)
 }
+// change password
 const onChangePassword = function (event) {
   event.preventDefault()
   const data = getFormfields(event.target)
@@ -39,12 +44,14 @@ const onChangePassword = function (event) {
     .then(ui.changePasswordSuccess)
     .catch(ui.changePasswordFailure)
 }
+// sign out
 const onSignOut = function (event) {
   event.preventDefault()
   api.signOut()
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
 }
+// create a track
 const onCreateRating = function (event) {
   event.preventDefault()
   const data = getFormfields(event.target)
@@ -52,12 +59,14 @@ const onCreateRating = function (event) {
     .then(ui.createRatingSuccess)
     .catch(ui.createRatingFailure)
 }
+// show the tracks
 const onIndexRating = function (event) {
   event.preventDefault()
   api.indexRating()
     .then(ui.indexRatingSuccess)
     .catch(ui.indexRatingFailure)
 }
+// update the tracks
 const onUpdateRating = function (event) {
   event.preventDefault()
   const data = getFormfields(event.target)
@@ -65,14 +74,15 @@ const onUpdateRating = function (event) {
     .then(ui.updateRatingSuccess)
     .catch(ui.updateRatingFailure)
 }
+// delete a track
 const onDeleteRating = function (event) {
   event.preventDefault()
   const data = getFormfields(event.target)
-  console.log(data.rating.id)
   api.deleteRating(data)
     .then(ui.deleteRatingSuccess)
     .catch(ui.deleteRatingFailure)
 }
+// change password button
 const onCpwClick = () => {
   $('#change-password-section').show()
   $('#ratr').hide()
@@ -81,6 +91,7 @@ const onCpwClick = () => {
   $('#message').text('')
   $('#index-rating-section').hide()
 }
+// back to the main page button
 const onMainpageClick = () => {
   $('#ratr').show()
   $('#main-heading').html(`<p">Create a track for anything you want, copy the id to update or delete,
@@ -93,6 +104,7 @@ const onMainpageClick = () => {
   $('#create-rating-section').hide()
   $('#message').text('')
 }
+// update nav button
 const makeUpdate = () => {
   $('#update-rating-section').show()
   $('#delete-rating-section').hide()
@@ -102,6 +114,7 @@ const makeUpdate = () => {
   $('#main-heading').text('The best way to update what you like!')
   $('#message').text('')
 }
+// delete nav button
 const makeDelete = () => {
   $('#delete-rating-section').show()
   $('#update-rating-section').hide()
@@ -111,6 +124,7 @@ const makeDelete = () => {
   $('#main-heading').text('The best way to delete what you don\'t like!')
   $('#message').text('')
 }
+// create nav button
 const makeCreate = () => {
   $('#create-rating-section').show()
   $('#update-rating-section').hide()
@@ -120,6 +134,7 @@ const makeCreate = () => {
   $('#message').text('')
   $('#main-heading').text('The best way to create tracks for what you like!')
 }
+// random taco generator button
 const tryTaco = () => {
   api.taco()
     .then(ui.tryTacoSuccess)

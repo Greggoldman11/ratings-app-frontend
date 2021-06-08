@@ -14,6 +14,7 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
+      <!-- Make a nav for all CRUD actions besides the index -->
       <ul class="nav justify-content-center">
         <li class="nav-item">
           <button class="nav-link cpw" type="submit">Change Password</button>
@@ -31,19 +32,22 @@
           <button class="nav-link delete" type="submit">Delete</button>
         </li>
         <li class="nav-item">
-          <button class="nav-link taco" type="submit">Click for a Taco<span data-desc="ifyou"></span></button>
+          <button class="nav-link taco" type="submit">Click for a Taco</button>
         </li>
       </ul>
+      <!-- a div to place header text -->
       <div id="main-heading-div">
         <h1 id="main-heading" class="d-flex justify-content-center">The best way to keep track of what you like&nbsp;
             <i class="fa fa-train"></i>
         </h1>
       </div>
+      <!-- don't forget to add the index action -->
       <section id="index-rating-section">
         <form id="indexRatings">
             <button type="submit" id="index-button">View My Tracks</button>
         </form>
       </section>
+      <!-- Make sections to perform auth actions -->
       <section id="sign-up-section">
         <h1>Start Tracking Today</h1>
         <form id="signUp">
@@ -72,6 +76,7 @@
         </form>
         <button class="nav-item main-page">Back to main</button>
       </section>
+      <!-- make a section to delete -->
       <div id="ratr">
         <section id="create-rating-section">
           <form id="createRating">
