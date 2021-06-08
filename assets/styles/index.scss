@@ -2,7 +2,7 @@
 $alt-color: #BDB9B9;
 body {
   text-align: center;
-  background: #146615;
+  background-color: #146615;
 }
 #ratr, #delete-rating-section, #ratingsHtml {
   text-align: center;
@@ -10,7 +10,7 @@ body {
 .nav {
 display: flex;
 justify-content: flex-end;
-
+background-color: #06FAC6;
 }
 #main-heading {
   margin-top: 10%;
@@ -21,4 +21,15 @@ justify-content: flex-end;
 }
 h1, h2 {
   color: $alt-color;
+}
+button {
+  margin: 12px;
+  background-color: $alt-color;
+  border-radius: 10px;
+}
+#main-heading-div {
+  display: flex;
+  justify-content: center;
+  background: url('../../public/smiley-scale.jpeg') no-repeat center center;
+  background-size: contain;
 }
