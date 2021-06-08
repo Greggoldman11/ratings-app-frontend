@@ -5,6 +5,7 @@ const signUpSuccess = () => {
   $('#message').html('You have successfully signed up')
   $('#sign-in-section').show()
   $('#sign-up-section').hide()
+  $('#altSignIn').hide()
 }
 const signUpFailure = () => {
   $('form').trigger('reset')
