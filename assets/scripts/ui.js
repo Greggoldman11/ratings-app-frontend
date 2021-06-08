@@ -66,11 +66,11 @@ const indexRatingSuccess = (res) => {
   let ratingsHtml = ''
   res.ratings.forEach(function (rating) {
     ratingsHtml += `
-      <h2 class='border-top'>Name: ${rating.name}</h2>
+      <h2 class='border-top rounded-pill'>Name: ${rating.name}</h2>
       <h4>ID: ${rating._id}</h4>
       <h4>Category: ${rating.category}</h4>
       <h4>Notes: ${rating.notes}</h4>
-      <h4 class='border-bottom'>Rating: ${rating.rating}</h4>
+      <h4 class='border-bottom rounded-pill'>Rating: ${rating.rating}</h4>
       `
   })
   $('#message').show()
