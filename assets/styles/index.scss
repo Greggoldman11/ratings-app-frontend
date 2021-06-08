@@ -3,6 +3,10 @@ $alt-color: silver;
 body {
   text-align: center;
   background-color: #ccffff;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../../public/wall-background.jpeg') no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 100vh;
 }
 
 .nav {
@@ -13,7 +17,14 @@ background-color: black;
 .nav-link {
   border-color: yellow;
 }
-
+#message {
+  background-color: yellow;
+  width: 400px;
+  font-size: 50px;
+  text-align: center;
+  margin: auto;
+  border-radius: 5px;
+}
 button {
   margin: 12px;
   color: white;
@@ -26,19 +37,17 @@ button {
 #main-heading-div {
   color: $alt-color;
   display: flex;
-  height: 500px;
-  width: 100%;
   margin: auto;
-  margin-top: 2%;
+  margin-top: 5%;
+  margin-bottom: 5%;
   padding-top: 5%;
-  max-height: calc(100vh - 75px);
-  max-width: calc(100vh - 75px);
   justify-content: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../../public/guides-media-critic.png') no-repeat center center;
-  background-size: cover;
-}
+ }
 #ratr, #delete-rating-section {
   display: flex;
   justify-content: center;
   color: black;
+}
+#sign-in-section #sign-up-section {
+  margin-bottom: 10%;
 }

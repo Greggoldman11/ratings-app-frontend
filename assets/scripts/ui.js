@@ -66,16 +66,16 @@ const indexRatingSuccess = (res) => {
   let ratingsHtml = ''
   res.ratings.forEach(function (rating) {
     ratingsHtml += `
-      <h2>Name: ${rating.name}</h2>
-      <h6>ID: ${rating._id}</h6>
-      <p>Category: ${rating.category}</p>
-      <p>Notes: ${rating.notes}</p>
-      <p>Rating: ${rating.rating}</p>
+      <h2 class='border-top'>Name: ${rating.name}</h2>
+      <h4>ID: ${rating._id}</h4>
+      <h4>Category: ${rating.category}</h4>
+      <h4>Notes: ${rating.notes}</h4>
+      <h4 class='border-bottom'>Rating: ${rating.rating}</h4>
       `
   })
   $('#message').show()
   $('#message').css('font-size', '25')
-  $('#message').html(`The ratings are: ${ratingsHtml}`)
+  $('#message').html(`Your ratings are: ${ratingsHtml}`)
 }
 const indexRatingFailure = () => {
   $('#message').text('Failed to get ratings')
