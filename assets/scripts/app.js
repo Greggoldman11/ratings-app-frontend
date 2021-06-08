@@ -34,4 +34,5 @@ $(() => {
   $('.delete').on('click', authEvents.makeDelete)
   $('.update').on('click', authEvents.makeUpdate)
   $('.create').on('click', authEvents.makeCreate)
+  $('.taco').on('click', authEvents.tryTaco)
 })

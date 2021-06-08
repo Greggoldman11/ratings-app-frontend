@@ -73,6 +73,12 @@ const deleteRating = function (data) {
     data
   })
 }
+const taco = () => {
+  return $.ajax({
+    method: 'GET',
+    url: 'http://taco-randomizer.herokuapp.com/random/'
+  })
+}
 module.exports = {
   signUp,
   signIn,
@@ -81,5 +87,6 @@ module.exports = {
   createRating,
   indexRating,
   updateRating,
-  deleteRating
+  deleteRating,
+  taco
 }

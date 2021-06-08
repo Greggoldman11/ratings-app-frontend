@@ -15,6 +15,9 @@ const signInSuccess = (res) => {
   store.user = res.user.email
   store.token = res.user.token
   $('#message').text(`Welcome ${store.user}!`)
+  $('#main-heading').html(`<p>Create a track for anything you want, copy the id to update or delete,
+      or click for a random taco... then track it!
+    </p>`)
   $('#sign-in-section').hide()
   $('#signOut').show()
   $('#ratr').show()
@@ -109,6 +112,19 @@ const deleteRatingFailure = () => {
   $('form').trigger('reset')
   $('#message').text('Failure')
 }
+const tryTacoSuccess = (res) => {
+  store.taco = res
+  console.log(store.taco)
+  const taco = `
+  <h1>Name: ${store.taco.base_layer.name}</h1>
+  <article style="font-size:20px">Recipe: ${store.taco.base_layer.recipe}</article>
+  `
+  $('#message').html(taco)
+  $('#main-heading').text('Since you clicked on the taco you have to make a taco and then track it in this app!')
+}
+const tryTacoFailure = () => {
+  $('#message').text('no taco for you')
+}
 
 module.exports = {
   signUpSuccess,
@@ -126,5 +142,7 @@ module.exports = {
   indexRatingFailure,
   updateRatingFailure,
   deleteRatingFailure,
-  createRatingFailure
+  createRatingFailure,
+  tryTacoSuccess,
+  tryTacoFailure
 }

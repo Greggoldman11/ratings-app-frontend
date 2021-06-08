@@ -18,7 +18,7 @@ background-color: black;
 }
 .nav-link {
   border: solid 2px yellow;
-  padding: 25px;
+  padding: 15px;
   margin: 25px;
 }
 #message {
@@ -31,11 +31,11 @@ background-color: black;
 }
 button {
   margin: 12px;
-  color: white;
   background-color: $alt-color;
   border-radius: 10px;
   &:hover {
     background: grey;
+    font-size: 115%;
   }
 }
 #main-heading-div {

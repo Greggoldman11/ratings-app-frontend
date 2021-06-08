@@ -83,7 +83,9 @@ const onCpwClick = () => {
 }
 const onMainpageClick = () => {
   $('#ratr').show()
-  $('#main-heading').text('The best way to keep track of what you like!')
+  $('#main-heading').html(`<p">Create a track for anything you want, copy the id to update or delete,
+      or click for a random taco... then track it!
+    </p>`)
   $('#change-password-section').hide()
   $('#index-rating-section').show()
   $('#update-rating-section').hide()
@@ -118,6 +120,11 @@ const makeCreate = () => {
   $('#message').text('')
   $('#main-heading').text('The best way to create tracks for what you like!')
 }
+const tryTaco = () => {
+  api.taco()
+    .then(ui.tryTacoSuccess)
+    .catch(ui.tryTacoFailure)
+}
 module.exports = {
   onSignUp,
   onSignIn,
@@ -133,5 +140,6 @@ module.exports = {
   onMainpageClick,
   makeUpdate,
   makeDelete,
-  makeCreate
+  makeCreate,
+  tryTaco
 }
