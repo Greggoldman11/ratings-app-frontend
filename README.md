@@ -5,7 +5,7 @@ A ratings app that allows the user to rate anything they would like. A user can 
 ## Important Links
 - [Backend Repo](https://github.com/Greggoldman11/ratings-app-backend)
 - [Deployed API](https://ratr-app.herokuapp.com/)
--[Deployed Client](https://greggoldman11.github.io/ratings-app-frontend/)
+-[Deployed Client](https://greggoldman11.github.io/trackr-app/)
 
 ### User Stories
 As a user I want to ...
